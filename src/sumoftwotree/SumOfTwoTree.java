@@ -24,6 +24,7 @@ public class SumOfTwoTree {
         while (iter1.hasNext()) {
             
             int a = iter1.next();
+            if(a > twoSum) break;
 
             Iterator<Integer> iter2 = set.iterator();
             while (iter2.hasNext()) {
