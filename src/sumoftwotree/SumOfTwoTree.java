@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 public class SumOfTwoTree {
 
-    /*--------------------------------------------------------------------------------------------
+    /*------------------------------------------------------------------------------------
     Sum of Two Integers that will not traverse the entire tree set
     Written by: Kevin Duraj
     */
