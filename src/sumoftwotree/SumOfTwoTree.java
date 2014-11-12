@@ -7,12 +7,13 @@ import java.util.TreeSet;
 public class SumOfTwoTree {
 
     /*--------------------------------------------------------------------------------------------
-    Sum of Two Integers that will not traverse the entire tree.
+    Sum of Two Integers that will not traverse the entire tree set
     Written by: Kevin Duraj
     */
     public static void main(String[] args) {
-
-        int twoSum = 44;
+        
+        int twoSum = 13;
+        System.out.println("Searching for sum of two: " + twoSum + "\n");        
         int[] array = { -2, -14, -3, 5, 6, 7, 10, 34, 3, 56, 100 };
         
         Set<Integer> set = new TreeSet<>();
@@ -22,19 +23,19 @@ public class SumOfTwoTree {
             set.add(array[i]);
         }            
         System.out.println("Given Data:\n" + set);
-        System.out.println("Searching for sum of two: " + twoSum + "\n");
 
+        
+        /*------------------------- first iterator -------------------------------*/
         Iterator<Integer> iter1 = set.iterator();
         int first = iter1.next();
-        System.out.println("first = " + first);
-        
-        while (iter1.hasNext()) {
+        while (iter1.hasNext()) {           // first iterator
             
             int a = iter1.next();
             if( first + a > twoSum) break;
 
+            /*------------------- second iterator ---------------------*/
             Iterator<Integer> iter2 = set.iterator();
-            while (iter2.hasNext()) {
+            while (iter2.hasNext()) {      // second iterator
 
                 int b = iter2.next();
 
@@ -44,7 +45,8 @@ public class SumOfTwoTree {
                     break;
                 }
             }
+            /*---------------------------------------------------------*/
         }
+        /*------------------------------------------------------------------------*/
     }
 }
-/*--------------------------------------------------------------------------------------------*/
